@@ -1,8 +1,11 @@
 import React from 'react'
+import Ibutton from '../interfaces/Button'
 
-const Button = () => {
+
+const Button = ({className, children, ...rest}:Ibutton) => {
+  console.log(children);
   return (
-    <div>Button</div>
+    <button className={className} onClick={rest.onClick}>{children}</button>
   )
 }
 
