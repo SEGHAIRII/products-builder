@@ -4,5 +4,6 @@ export default interface IproductCard {
     alt:string,
     title:string,
     description:string,
-    price:number
+    price:number,
+    onClick:()=>void
 }
