@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import Image from './Image'
-import Button from './Button'
+import Button from '../ui/Button'
 import IproductCard from '../interfaces/productCard'
 import { textSlicer } from '../utilities/functions'
    
@@ -20,8 +20,8 @@ const ProductCard : FC<IproductCard> = ({img, alt, title, description, price}) =
             <Image src= {img} alt = {alt} className='w-10 h-10 rounded-full object-top' />
         </div>
         <div className='flex flex-row justify-between gap-2 text-white mb-3'>
-            <Button className={"w-full h-8 rounded-md bg-indigo-500"}  onClick={(e) => {window.alert("You tried to edit")}}> Edit </Button>
-            <Button className={"w-full h-8 rounded-md bg-red-500"}  onClick={(e) => {window.alert("You tried to delete")}}> Remove </Button>
+            <Button className='bg-indigo-500'  onClick={(e) => {window.alert("You tried to edit")}}> Edit </Button>
+            <Button className="bg-red-500" onClick={(e) => {window.alert("You tried to delete")}}> Remove </Button>
         </div>
     </div>
   )
